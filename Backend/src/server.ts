@@ -2,9 +2,8 @@ import express from 'express';
 
 const app = express();
 
-
 app.get('/test',(request, response)=>{
- return response.send("ola");
+ return response.send("hello");
 });
 
 app.listen(3333, ()=>{
