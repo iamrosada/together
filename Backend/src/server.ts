@@ -1,11 +1,14 @@
-import express from 'express';
+import express from "express";
+import { router } from "../src/routes";
 
 const app = express();
 
-app.get('/test',(request, response)=>{
- return response.send("hello");
-});
+import "./database";
 
-app.listen(3333, ()=>{
-    console.log('server is running');
-})
+app.use(express.json());
+
+app.use(router);
+
+app.listen(3333, () => {
+  console.log("server is running");
+});
