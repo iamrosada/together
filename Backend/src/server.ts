@@ -1,4 +1,7 @@
+import "reflect-metadata";
 import express, { Request, Response } from "express";
+import "express-async-errors";
+
 import { router } from "../src/routes";
 
 const app = express();
